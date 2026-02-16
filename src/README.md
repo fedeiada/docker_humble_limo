@@ -24,8 +24,18 @@ These packages have been tested with ROS 2 Humble and ROS 2 Iron on an Ubuntu sy
 To use Torch with an NVIDIA graphics card, it is necessary to install the NVIDIA drivers for Ubuntu. [Here](https://letmegooglethat.com/?q=Install+nvidia+drivers+ubuntu).
 
 ## Usage
+### First time 
+Build the workspace with limo package with
+```shell
+colcon build --symlink-install
+```
 
-Create a workspace and clone the repo in the source directory (don't  call your workspace a generic `<my_workspace>`)
+Source the workspace with (you have to add it to the `~/.bashrc` or do it on every newly opened terminal)
+```shell
+source install/setup.bash
+```
+### develop
+For new workspace  create folder and clone the repo in the source directory (don't  call your workspace a generic `<my_workspace>`)
 ```shell
 mkdir <my_workspace>
 cd <my_workspace>
