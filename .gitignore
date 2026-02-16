@@ -1,0 +1,10 @@
+__pycache__
+.ruff_cache
+.vscode
+build
+install
+log
+
+*.csv
+*.mp4
+*.pdf
