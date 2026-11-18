@@ -132,6 +132,16 @@ ros2 launch limo_simulation arm_teleop.launch.py robot:=robot_0
 ```
 Keys `q w e r t y` / `a s d f g h` jog joints 1-6 +/-, `o`/`c` open/close the gripper, `z` goes home, `+`/`-` change the step (default 5°).
 
+### MoveIt 2 (arm motion planning)
+`limo_mycobot_moveit_config` plans the myCobot arm in rviz (MotionPlanning panel) and executes on the Gazebo `arm_controller`:
+```shell
+# Gazebo (1 robot with arm) + move_group + rviz
+ros2 launch limo_mycobot_moveit_config sim_moveit.launch.py
+# or, on an already running simulation with with_arm:=true
+ros2 launch limo_mycobot_moveit_config moveit.launch.py robot_name:=robot_1
+```
+Drag the marker on the gripper (or pick the `home`/`ready` goal states), then *Plan & Execute*. Only the `arm` group is planned; the gripper keeps using the `mycobot_sim_bridge.py` topics. `move_group` runs in the robot namespace (`/robot_N/move_action`, ...), so a `MoveGroupInterface` client must run in that namespace too.
+
 
 ## Author
 

@@ -19,6 +19,7 @@ RUN --mount=type=cache,sharing=locked,target=/var/cache/apt --mount=type=cache,s
     ros-$ROS_DISTRO-ros-gz \
     ros-$ROS_DISTRO-ign-ros2-control \
     ros-$ROS_DISTRO-joint-state-publisher \
+    ros-$ROS_DISTRO-moveit \
     ros-$ROS_DISTRO-tf-transformations \
     ros-$ROS_DISTRO-joint-state-publisher-gui \
     ros-${ROS_DISTRO}-pinocchio \
